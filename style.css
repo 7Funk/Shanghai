@@ -16,19 +16,23 @@ header{
     background: #000;
     display: flex;
 }
+
+.header {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .header__logo{
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     font-weight: 800;
     font-size: 24px;
-    margin-top: 56px;
-    margin-left: 12%;
-
+    display: inline-block;
 }
 nav{
-    margin-top: 56px;
-    margin-left: 29%;
-
+    display: inline-block;
 }
 .topnav a{
     color: rgb(255, 255, 255);
@@ -71,7 +75,7 @@ h1{
 
 
 .wrapper{
-    width: 76%;
+    width: 1140px;
     margin: 0 auto;
 
 }
@@ -101,13 +105,13 @@ main .main__about{
     min-width: 100%;
 }
 
-.mein__team{
+.main__team{
     background: #000;
     text-align: center;
     padding: 100px 0 165px 0;
     color: rgb(255, 255, 255);
 }
-.mein__team h2{
+.main__team h2{
     font-size: 44px;
     padding-bottom: 30px;
 }
@@ -128,10 +132,11 @@ main .main__about{
 }
 .team__cards{
     display: flex;
-
+    justify-content: center;
 }
 .card{
     margin: 0 40px;
+    width: 25%;
 }
 .name{
     font-size: 20px;
@@ -199,17 +204,27 @@ main .main__about{
         width: 100%;
     }
     .topnav.responsive{
-        position: relative;
-        top: 50px;
-        left: -200px;
+        height: 340px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #000;
+        position: fixed;
     }
-    header .topnav.responsive{
+    .header .topnav.responsive{
         height: 340px;
     }
     .topnav.responsive a.icon{
         position: absolute;
-        top: -50px;
-        right: -200px;
+        top: 51px;
+        right: 50px;
     }
     .topnav.responsive a{
         float: none;
